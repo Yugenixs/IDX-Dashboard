@@ -453,9 +453,9 @@ elif page == "Perbandingan":
         else:
             st.info("Pilih lebih banyak saham untuk melihat matriks korelasi.")
 
+```python
 st.markdown("---")
-
-st.markdown("""
+footer = """
 <div style="text-align: center; padding: 10px 0; font-size: 14px; color: #888;">
     
     <div style="font-weight: 600; color: #ccc;">
@@ -475,4 +475,6 @@ st.markdown("""
     </div>
 
 </div>
-""", unsafe_allow_html=True)
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
