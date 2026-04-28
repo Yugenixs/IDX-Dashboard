@@ -230,11 +230,11 @@ def build_summary() -> pd.DataFrame:
 
 if page == "Market Overview":
     st.markdown(f"""
-    <div class="page-header">
-      <h1>IDX Top 10 Saham — Market Overview 2025</h1>
-      <p>Bursa Efek Indonesia · {start_date.strftime('%d %b %Y')} — {end_date.strftime('%d %b %Y')} · 10 Emiten</p>
-    </div>
-    """, unsafe_allow_html=True)
+<div class="page-header">
+<h1>IDX Top 10 Saham — Market Overview 2025</h1>
+<p>Bursa Efek Indonesia · {start_date.strftime('%d %b %Y')} — {end_date.strftime('%d %b %Y')} · 10 Emiten</p>
+</div>
+""", unsafe_allow_html=True)
 
     summary = build_summary()
 
@@ -285,13 +285,13 @@ elif page == "Analisis Saham":
     ytd   = ((df["Close"].iloc[-1] / df["Close"].iloc[0]) - 1) * 100
 
     st.markdown(f"""
-    <div class="page-header">
-      <h1>{selected_ticker.replace('.JK','')} — {meta['name']}
-        <span class="badge {badge_color}">{ytd:+.2f}%</span>
-      </h1>
-      <p>{meta['sector']} · Bursa Efek Indonesia · {start_date.strftime('%d %b %Y')} — {end_date.strftime('%d %b %Y')}</p>
-    </div>
-    """, unsafe_allow_html=True)
+<div class="page-header">
+<h1>{selected_ticker.replace('.JK','')} — {meta['name']}
+<span class="badge {badge_color}">{ytd:+.2f}%</span>
+</h1>
+<p>{meta['sector']} · Bursa Efek Indonesia · {start_date.strftime('%d %b %Y')} — {end_date.strftime('%d %b %Y')}</p>
+</div>
+""", unsafe_allow_html=True)
 
     if df.empty:
         st.warning("Tidak ada data untuk periode ini.")
@@ -388,11 +388,11 @@ elif page == "Perbandingan":
         st.stop()
 
     st.markdown(f"""
-    <div class="page-header">
-      <h1>Perbandingan Saham</h1>
-      <p>{' · '.join(t.replace('.JK','') for t in compare_tickers)} · {start_date.strftime('%d %b %Y')} — {end_date.strftime('%d %b %Y')}</p>
-    </div>
-    """, unsafe_allow_html=True)
+<div class="page-header">
+<h1>Perbandingan Saham</h1>
+<p>{' · '.join(t.replace('.JK','') for t in compare_tickers)} · {start_date.strftime('%d %b %Y')} — {end_date.strftime('%d %b %Y')}</p>
+</div>
+""", unsafe_allow_html=True)
 
     comp_data = {t: filtered(t) for t in compare_tickers}
     comp_summary = build_summary()
@@ -442,37 +442,32 @@ elif page == "Perbandingan":
         if price_matrix.shape[1] >= 2:
             st.plotly_chart(correlation_heatmap(price_matrix), use_container_width=True)
             st.markdown("""
-            <div class="card">
-              <b>Cara membaca korelasi:</b><br>
-              <code>+1.0</code> → bergerak searah sempurna &nbsp;|&nbsp;
-              <code>0.0</code> → tidak ada hubungan &nbsp;|&nbsp;
-              <code>-1.0</code> → bergerak berlawanan arah<br>
-              Saham perbankan (BBCA, BBRI, BMRI, BBNI) cenderung berkorelasi tinggi.
-            </div>
-            """, unsafe_allow_html=True)
+<div class="card">
+<b>Cara membaca korelasi:</b><br>
+<code>+1.0</code> → bergerak searah sempurna &nbsp;|&nbsp;
+<code>0.0</code> → tidak ada hubungan &nbsp;|&nbsp;
+<code>-1.0</code> → bergerak berlawanan arah<br>
+Saham perbankan (BBCA, BBRI, BMRI, BBNI) cenderung berkorelasi tinggi.
+</div>
+""", unsafe_allow_html=True)
         else:
             st.info("Pilih lebih banyak saham untuk melihat matriks korelasi.")
-            
+
 st.markdown("---")
 footer = """
 <div style="text-align: center; padding: 10px 0; font-size: 14px; color: #888;">
-    
-    <div style="font-weight: 600; color: #ccc;">
-        IDX Top 10 Dashboard · Portfolio Project 2025
-    </div>
-    
-    <div style="margin-top: 6px;">
-        Developed by <b>Ilyas Tio Afrilian (Yugenix)</b>
-    </div>
-    
-    <div style="margin-top: 4px;">
-        Data source: Yahoo Finance
-    </div>
-    
-    <div style="margin-top: 8px; font-size: 12px; color: #666;">
-        For educational and portfolio purposes only · Always do your own research (DYOR)
-    </div>
-
+<div style="font-weight: 600; color: #ccc;">
+IDX Top 10 Dashboard · Portfolio Project 2025
+</div>
+<div style="margin-top: 6px;">
+Developed by <b>Ilyas Tio Afrilian (Yugenix)</b>
+</div>
+<div style="margin-top: 4px;">
+Data source: Yahoo Finance
+</div>
+<div style="margin-top: 8px; font-size: 12px; color: #666;">
+For educational and portfolio purposes only · Always do your own research (DYOR)
+</div>
 </div>
 """
 
