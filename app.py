@@ -457,6 +457,7 @@ st.markdown("---")
 
 st.markdown("""
 <div style="text-align: center; padding: 10px 0; font-size: 14px; color: #888;">
+    
     <div style="font-weight: 600; color: #ccc;">
         IDX Top 10 Dashboard · Portfolio Project 2025
     </div>
@@ -472,5 +473,6 @@ st.markdown("""
     <div style="margin-top: 8px; font-size: 12px; color: #666;">
         For educational and portfolio purposes only · Always do your own research (DYOR)
     </div>
+
 </div>
 """, unsafe_allow_html=True)
