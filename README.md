@@ -85,4 +85,10 @@ Historical price data sourced from Yahoo Finance, stored as static CSV files in 
 
 ---
 
-Developed by **Ilyas Tio Afrilian** — [github.com/yugenixs](https://github.com/yugenixs)
+## Contact
+
+- Email: yugenix555@gmail.com
+- Twitter: [@yugenixs](https://twitter.com/yugenixs)
+- GitHub: [@yugenixs](https://github.com/yugenixs)
+  
+Developed by **Ilyas Tio Afrilian**
