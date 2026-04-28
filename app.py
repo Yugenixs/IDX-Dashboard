@@ -452,8 +452,7 @@ elif page == "Perbandingan":
             """, unsafe_allow_html=True)
         else:
             st.info("Pilih lebih banyak saham untuk melihat matriks korelasi.")
-
-```python
+            
 st.markdown("---")
 footer = """
 <div style="text-align: center; padding: 10px 0; font-size: 14px; color: #888;">
