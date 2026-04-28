@@ -454,9 +454,23 @@ elif page == "Perbandingan":
             st.info("Pilih lebih banyak saham untuk melihat matriks korelasi.")
 
 st.markdown("---")
-st.caption(
-    "**IDX Top 10 Dashboard** · Portfolio Project 2025\n\n"
-    "Developed by **Ilyas Tio Afrilian (Yugenix)**\n"
-    "Data source: Yahoo Finance\n\n"
-    "*For educational and portfolio purposes only · Always do your own research (DYOR)*"
-)
+
+st.markdown("""
+<div style="text-align: center; padding: 10px 0; font-size: 14px; color: #888;">
+    <div style="font-weight: 600; color: #ccc;">
+        IDX Top 10 Dashboard · Portfolio Project 2025
+    </div>
+    
+    <div style="margin-top: 6px;">
+        Developed by <b>Ilyas Tio Afrilian (Yugenix)</b>
+    </div>
+    
+    <div style="margin-top: 4px;">
+        Data source: Yahoo Finance
+    </div>
+    
+    <div style="margin-top: 8px; font-size: 12px; color: #666;">
+        For educational and portfolio purposes only · Always do your own research (DYOR)
+    </div>
+</div>
+""", unsafe_allow_html=True)
