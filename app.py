@@ -459,14 +459,8 @@ footer = """
 <div style="font-weight: 600; color: #ccc;">
 IDX Top 10 Dashboard · Portfolio Project 2025
 </div>
-<div style="margin-top: 6px;">
+<div style="margin-top: 2px;">
 Developed by <b>Ilyas Tio Afrilian (Yugenix)</b>
-</div>
-<div style="margin-top: 4px;">
-Data source: Yahoo Finance
-</div>
-<div style="margin-top: 8px; font-size: 12px; color: #666;">
-For educational and portfolio purposes only · Always do your own research (DYOR)
 </div>
 </div>
 """
